@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combine Times</title>
+</head>
+<body>
+    <button onclick="goBack()">&#8592; Return</button>
+    <h1>Time Combination Calculator</h1>
+    <h3>Applications of rational expressions was first created by Henri Pade in 1890, and to this day we have been using this to model specific rational functions. Rational<br>
+        equations can be used to solve several different kinds of problems, such as work related problems, where two people or machines work together at different reates <br>
+        to complete a task.</h3>
+    <p>Please enter two times</p>
+    <input id="time1" type="text" placeholder="Enter the first time:">
+    <input id="time2" type="text" placeholder="Enter the second time:">
+    <button onclick="calculateTime()">Enter</button>
+    <p id="result"></p>
+    <h4><br> Ex. <br> <br>
+         Cathrine can paint a house in 15 hours. Dan can paint it in 30 hours. How long will it take them working together? 
+        </h4>
+    <p>In this example, we would just simply plug the values 15 and 30 into the boxes, and we have our answer<br></p>
+
+
+
+   <h4><br>One inlet pipe can fill a pool in 8 hours. And a drain can empty the pool in 12 hours. How long will it take the pipe to fill the pool if the drain is left open?</h4>
+        </h4>
+    <p>In this example, we have a positive and a negative value. The 8 hours fill up, while the 12 drain it. So your two values here would be 8 and -12<br></p>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function calculateTime() {
+        let time1 = parseFloat(document.getElementById('time1').value);
+        let time2 = parseFloat(document.getElementById('time2').value);
+
+        let combinedTime = (time1*time2)/(time1+time2);
+
+        document.getElementById('result').textContent = `The time is ${combinedTime}`;
+    }
+    </script>
+</body>
+</html>
